@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ember-bg: #000000;
+  --color-ember-surface: #0A0A0A;
+  --color-ember-elevated: #111111;
+  --color-ember-card: #1A1A1A;
+  --color-ember-border: #222222;
+  --color-ember-border-hover: #333333;
+  --color-ember-text: #FAFAFA;
+  --color-ember-muted: #A1A1A1;
+  --color-ember-dim: #666666;
+  --color-ember-accent: #10B981;
+  --color-ember-accent-hover: #34D399;
+  --color-ember-cyan: #06B6D4;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+  --animate-fade-in: fadeIn 0.6s ease-out forwards;
+  --animate-slide-up: slideUp 0.6s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.1); }
+  100% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.3); }
+}
+
+body {
+  background: #000000;
+  color: #FAFAFA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: #FAFAFA;
+}
+
+.gradient-text {
+  background-image: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
